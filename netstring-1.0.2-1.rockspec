@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "netstring"
-version = "1.0.2-0"
+version = "1.0.2-1"
 -- LuaDist source
 source = {
-  tag = "1.0.2-0",
+  tag = "1.0.2-1",
   url = "git://github.com/LuaDist-testing/netstring.git"
 }
 -- Original source
 -- source = {
---     url = "git://github.com/jprjr/netstring.lua.git",
---     tag = "1.0.2"
+--     url = "https://github.com/jprjr/netstring.lua/archive/1.0.2.tar.gz",
+--     file = "netstring.lua-1.0.2.tar.gz",
 -- }
 description = {
     summary = "Implementation of DJB's netstring for lua",
