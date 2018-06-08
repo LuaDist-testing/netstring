@@ -1,4 +1,4 @@
--- Copyright 2016 John Regan <john@jrjrtech.com
+-- Copyright 2016 John Regan <john@jrjrtech.com>
 
 local string_sub = string.sub
 local string_len = string.len
@@ -79,9 +79,12 @@ end
 function M.encode(...)
     local r = ""
     local err = {}
+    local args = {...}
 
-    for i,a in ipairs{...} do
-        if(type(a) == 'table') then
+    for i=1, #args do
+        local a = args[i]
+        local ta = type(a)
+        if ta == 'table' then
             -- grab table keys and sort
             local keys = {}
             for k in pairs(a) do keys[#keys+1] = k end
@@ -93,7 +96,7 @@ function M.encode(...)
                     r = r .. _encode(a[k])
                 end
             end
-         else
+         elseif ta ~= 'nil' then
              r = r .. _encode(a)
          end
     end
